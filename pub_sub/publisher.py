@@ -13,4 +13,5 @@ redis_connection = redis.Redis(hostname, port, retry_on_timeout=True)
 while True:
     message = {"random_no": random.random()}
     redis_connection.publish('channel', message)
+    print('message published')
     time.sleep(1)
